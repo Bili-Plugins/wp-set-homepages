@@ -66,7 +66,7 @@ if ( ! class_exists( 'BPWP_Set_Homepages_Admin' ) ) {
 			echo wp_sprintf(
 				/* translators: %s: Setting description. */
 				'<p class="description">%s</p>',
-				esc_html__( 'Description Goes here.', 'wp-set-homepages' )
+				esc_html__( 'Redirect logged-in users to this page when they try to access homepage.', 'wp-set-homepages' )
 			);
 		}
 

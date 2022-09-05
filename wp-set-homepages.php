@@ -16,7 +16,7 @@ if ( ! defined( 'BPWPSH_VERSION' ) ) {
 	/**
 	 * The version of the plugin.
 	 */
-	define( 'BPWPSH_VERSION', '1.0.0s' );
+	define( 'BPWPSH_VERSION', '1.0.0' );
 }
 if ( ! defined( 'BPWPSH_PATH' ) ) {
 	/**
