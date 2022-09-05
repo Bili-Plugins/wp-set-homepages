@@ -1,6 +1,6 @@
 === WP Set Homepages ===
 Contributors: bhargavbhandari90, hackkzy404, biliplugins
-Donate link: https://example.com/
+Donate link: https://www.paypal.me/BnB90/10
 Tags: Homepages, Users
 Requires at least: 4.5
 Tested up to: 6.0.2
