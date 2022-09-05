@@ -10,19 +10,12 @@
 
 ## Description ##
 
-Post Sponsorship plugin for WooCommerce.
+Set a different homepage for logged in users.
+For non-logged in users, default setting will be applicable.
 
 ## Installation ##
-1. Upload "woo-post-sponsorship" to the "/wp-content/plugins/" directory using FTP or upload plugin zip using upload button.
-2. Activate the plugin through the "Plugins" menu in WordPress.
-
-## Prequirements ##
-- Make sure WooCommerce Plugin is Installed/Activated.
-
-## Changelog ##
-
-### 1.0.1 ###
-* Minor bug fixes.
+1. Upload "wp-set-homepages" to the "/wp-content/plugins/" directory using FTP or upload plugin zip using upload button.
+2. Activate the plugin through the \"Plugins\" menu in WordPress.
 
 ### 1.0.0 ###
 * Initial release.

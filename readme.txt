@@ -1,5 +1,5 @@
 === WP Set Homepages ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: bhargavbhandari90, hackkzy404, biliplugins
 Donate link: https://example.com/
 Tags: Homepages, Users
 Requires at least: 4.5
