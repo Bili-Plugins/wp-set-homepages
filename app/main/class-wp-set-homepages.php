@@ -35,16 +35,34 @@ if ( ! class_exists( 'BPWP_Set_Homepages' ) ) {
 		 */
 		function bpwpsh_homepage_redirect() {
 
-			$page_on_front           = get_option( 'page_on_front' );
+			// Don't execute further, if user is not logged-in.
+			if ( ! is_user_logged_in() ) {
+				return;
+			}
+
+			$show_on_front           = get_option( 'show_on_front' );
 			$page_on_front_logged_in = get_option( 'page_on_front_logged_in' );
+
+			// Reset homepage.
+			if ( ! empty( $show_on_front ) && 'page' !== $show_on_front ) {
+
+				if ( ! empty( $page_on_front_logged_in ) ) {
+					update_option( 'page_on_front_logged_in', 0 );
+				}
+
+				return;
+			}
+
+			$page_on_front           = get_option( 'page_on_front' );
 			$page_on_front_logged_in = empty( $page_on_front_logged_in )
 				? intval( $page_on_front )
 				: intval( $page_on_front_logged_in );
 
 			// Redirect to selected page when got to homepage if user is logged-in.
-			if ( ( is_user_logged_in() && is_front_page() ) &&
+			if ( is_front_page() &&
 				! empty( $page_on_front_logged_in ) &&
-				'publish' === get_post_status( $page_on_front_logged_in ) ) {
+				'publish' === get_post_status( $page_on_front_logged_in ) &&
+				get_the_ID() !== $page_on_front_logged_in ) {
 
 				wp_redirect( get_permalink( $page_on_front_logged_in ) );
 				exit;
